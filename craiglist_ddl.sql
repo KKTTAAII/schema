@@ -36,12 +36,6 @@ CREATE TABLE "categories" (
     "category" TEXT   NOT NULL
 );
 
-CREATE TABLE "user_post" (
-    "id" SERIAL PRIMARY KEY,
-    "post_id" INTEGER   NOT NULL,
-    "user_id" INTEGER   NOT NULL
-);
-
 INSERT INTO region (city, state, country)
 VALUES ('Breckenridge', 'CO', 'USA'),
 ('Moab', 'UT', 'USA'),
@@ -66,6 +60,3 @@ VALUES (2, 'French Baker', 'I am looking for a job as a pastry chef', 1, 4),
 
 INSERT INTO post (user_id, title, description, region_id, category_id, show_phone_num, ok_to_contact)
 VALUES (2, 'Looking for 1bd', 'New here. Looking for a pet-friendly 1-bd apt ', 1, 3, true, true);
-
-INSERT INTO user_post(post_id, user_id)
-VALUES (1, 2), (2, 2), (3, 1);
